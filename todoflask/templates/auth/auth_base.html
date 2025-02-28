@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+	<div class="row justify-content-center">
+		<div class="col-sm-8">
+			<div class="card">
+				<div class="card-header">
+					<h1 class="text-center">{% block title %}{% endblock %}</h1>
+				</div>
+				<div class="card-body">
+					{% block authcontent %}
+
+					{% endblock %}
+					<div class="mt-3"></div>
+					<!-- Mostrar mensajes flash -->
+					{% for category, message in get_flashed_messages(with_categories=True) %}
+					<div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+						{{ message }}
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

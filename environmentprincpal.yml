@@ -1,0 +1,10 @@
+name: udemyflask
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - flask
+  - flask-wtf
+  - flask-sqlalchemy
+  - icecream
+prefix: /home/ucix/anaconda3/envs/udemyflask
